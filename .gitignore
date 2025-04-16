@@ -1,0 +1,15 @@
+# Mac OS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Node.js (hvis du senere bruker npm for noe)
+node_modules/
+
+# Logg-filer
+*.log
+
+# Midlertidige systemfiler
+Thumbs.db
+ehthumbs.db
