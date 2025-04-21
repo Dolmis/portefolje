@@ -6,27 +6,30 @@
   }
   
   body {
-    font-family: 'Georgia', serif;
-    background-color: #f8f5ef;
-    color: #111;
-    padding: 2rem;
-    line-height: 1.6;
+    font-family: serif;
+    background-color: #FFF9F3;
+    color: #1B1B1B;
+    padding: 2rem 8rem;
+    line-height: 1.2;
   }
   
   /* Header */
   header {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
+    padding-top: 4rem;
+    margin-bottom: 12rem;
   }
   
   .header-left {
-    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
   }
   
   .header-right a {
-    margin-left: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-left: 1rem;
     text-decoration: underline;
     color: inherit;
   }
@@ -37,22 +40,37 @@
   
   /* Main text */
   main {
-    max-width: 700px;
+    max-width: 1200px;
   }
   
   main h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 1rem;
   }
   
   main p {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     margin-bottom: 1rem;
   }
   
   /* Responsivt */
+  @media (max-width: 800px) {
+    body {
+      padding: 2rem 6rem;
+      line-height: 1.2;
+    }
+  }
+
   @media (max-width: 600px) {
+    body {
+      padding: 2rem 4rem;
+      line-height: 1.2;
+    }
+  }
+
+  @media (max-width: 400px) {
     header {
+      padding-top: 1rem;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
@@ -62,13 +80,10 @@
       margin-left: 0;
       margin-right: 1rem;
     }
-  
-    main h1 {
-      font-size: 1.6rem;
-    }
-  
-    main p {
-      font-size: 1.2rem;
+
+    body {
+      padding: 2rem 2rem;
+      line-height: 1.2;
     }
   }
   
